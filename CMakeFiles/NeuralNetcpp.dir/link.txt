@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++11 -g   CMakeFiles/NeuralNetcpp.dir/main.cpp.o CMakeFiles/NeuralNetcpp.dir/NeuralNet.cpp.o CMakeFiles/NeuralNetcpp.dir/Neuron.cpp.o CMakeFiles/NeuralNetcpp.dir/Matrix.cpp.o  -o NeuralNetcpp -rdynamic 

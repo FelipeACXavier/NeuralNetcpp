@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/3.5.1/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/3.5.1/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/3.5.1/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/3.5.1/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp
+Change Dir: /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_94f48/fast"
-/usr/bin/make -f CMakeFiles/cmTC_94f48.dir/build.make CMakeFiles/cmTC_94f48.dir/build
-make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_94f48.dir/testCCompiler.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_94f48.dir/testCCompiler.c.o   -c /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_94f48
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94f48.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_94f48.dir/testCCompiler.c.o  -o cmTC_94f48 -rdynamic 
-make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_8bc8c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8bc8c.dir/build.make CMakeFiles/cmTC_8bc8c.dir/build
+make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8bc8c.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_8bc8c.dir/testCCompiler.c.o   -c /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_8bc8c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8bc8c.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_8bc8c.dir/testCCompiler.c.o  -o cmTC_8bc8c -rdynamic 
+make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp
+Change Dir: /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_49f8f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_49f8f.dir/build.make CMakeFiles/cmTC_49f8f.dir/build
-make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_49f8f.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_49f8f.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_49f8f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49f8f.dir/link.txt --verbose=1
-/usr/bin/cc      -v CMakeFiles/cmTC_49f8f.dir/CMakeCCompilerABI.c.o  -o cmTC_49f8f -rdynamic  
+Run Build Command:"/usr/bin/make" "cmTC_85a31/fast"
+/usr/bin/make -f CMakeFiles/cmTC_85a31.dir/build.make CMakeFiles/cmTC_85a31.dir/build
+make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_85a31.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_85a31.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_85a31
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85a31.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_85a31.dir/CMakeCCompilerABI.c.o  -o cmTC_85a31 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -59,23 +59,23 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_49f8f' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc9CZUiV.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_49f8f /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_49f8f.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_85a31' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccQTepYr.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_85a31 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_85a31.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_49f8f/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_49f8f.dir/build.make CMakeFiles/cmTC_49f8f.dir/build]
-  ignore line: [make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_49f8f.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_49f8f.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_49f8f]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49f8f.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_49f8f.dir/CMakeCCompilerABI.c.o  -o cmTC_49f8f -rdynamic  ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_85a31/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_85a31.dir/build.make CMakeFiles/cmTC_85a31.dir/build]
+  ignore line: [make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_85a31.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_85a31.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_85a31]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85a31.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_85a31.dir/CMakeCCompilerABI.c.o  -o cmTC_85a31 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -85,13 +85,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_49f8f' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc9CZUiV.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_49f8f /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_49f8f.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_85a31' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccQTepYr.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_85a31 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_85a31.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc9CZUiV.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccQTepYr.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -109,7 +109,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_49f8f] ==> ignore
+    arg [cmTC_85a31] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -121,7 +121,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_49f8f.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_85a31.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -153,17 +153,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp
+Change Dir: /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_fb247/fast"
-/usr/bin/make -f CMakeFiles/cmTC_fb247.dir/build.make CMakeFiles/cmTC_fb247.dir/build
-make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fb247.dir/feature_tests.c.o
-/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_fb247.dir/feature_tests.c.o   -c /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/feature_tests.c
-Linking C executable cmTC_fb247
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb247.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_fb247.dir/feature_tests.c.o  -o cmTC_fb247 -rdynamic 
-make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_d1874/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d1874.dir/build.make CMakeFiles/cmTC_d1874.dir/build
+make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d1874.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_d1874.dir/feature_tests.c.o   -c /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/feature_tests.c
+Linking C executable cmTC_d1874
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d1874.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_d1874.dir/feature_tests.c.o  -o cmTC_d1874 -rdynamic 
+make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -173,17 +173,17 @@ make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFile
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp
+Change Dir: /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6f627/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6f627.dir/build.make CMakeFiles/cmTC_6f627.dir/build
-make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6f627.dir/feature_tests.c.o
-/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_6f627.dir/feature_tests.c.o   -c /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/feature_tests.c
-Linking C executable cmTC_6f627
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6f627.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_6f627.dir/feature_tests.c.o  -o cmTC_6f627 -rdynamic 
-make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_cfc9e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cfc9e.dir/build.make CMakeFiles/cmTC_cfc9e.dir/build
+make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cfc9e.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_cfc9e.dir/feature_tests.c.o   -c /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/feature_tests.c
+Linking C executable cmTC_cfc9e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cfc9e.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_cfc9e.dir/feature_tests.c.o  -o cmTC_cfc9e -rdynamic 
+make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -193,17 +193,17 @@ make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFile
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp
+Change Dir: /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_344d0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_344d0.dir/build.make CMakeFiles/cmTC_344d0.dir/build
-make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_344d0.dir/feature_tests.c.o
-/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_344d0.dir/feature_tests.c.o   -c /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/feature_tests.c
-Linking C executable cmTC_344d0
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_344d0.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_344d0.dir/feature_tests.c.o  -o cmTC_344d0 -rdynamic 
-make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_97b6f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_97b6f.dir/build.make CMakeFiles/cmTC_97b6f.dir/build
+make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_97b6f.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_97b6f.dir/feature_tests.c.o   -c /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/feature_tests.c
+Linking C executable cmTC_97b6f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_97b6f.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_97b6f.dir/feature_tests.c.o  -o cmTC_97b6f -rdynamic 
+make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -211,30 +211,30 @@ make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFile
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp
+Change Dir: /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_54df3/fast"
-/usr/bin/make -f CMakeFiles/cmTC_54df3.dir/build.make CMakeFiles/cmTC_54df3.dir/build
-make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_54df3.dir/testCXXCompiler.cxx.o
-/usr/bin/c++      -o CMakeFiles/cmTC_54df3.dir/testCXXCompiler.cxx.o -c /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_54df3
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54df3.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_54df3.dir/testCXXCompiler.cxx.o  -o cmTC_54df3 -rdynamic 
-make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_1379b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1379b.dir/build.make CMakeFiles/cmTC_1379b.dir/build
+make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1379b.dir/testCXXCompiler.cxx.o
+/usr/bin/c++      -o CMakeFiles/cmTC_1379b.dir/testCXXCompiler.cxx.o -c /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_1379b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1379b.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_1379b.dir/testCXXCompiler.cxx.o  -o cmTC_1379b -rdynamic 
+make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp
+Change Dir: /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3c4b2/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3c4b2.dir/build.make CMakeFiles/cmTC_3c4b2.dir/build
-make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_3c4b2.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++      -o CMakeFiles/cmTC_3c4b2.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_3c4b2
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c4b2.dir/link.txt --verbose=1
-/usr/bin/c++       -v CMakeFiles/cmTC_3c4b2.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_3c4b2 -rdynamic  
+Run Build Command:"/usr/bin/make" "cmTC_6bde0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6bde0.dir/build.make CMakeFiles/cmTC_6bde0.dir/build
+make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6bde0.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++      -o CMakeFiles/cmTC_6bde0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_6bde0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6bde0.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTC_6bde0.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_6bde0 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -244,23 +244,23 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3c4b2' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccA0aDFw.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_3c4b2 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_3c4b2.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6bde0' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccdX46Go.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_6bde0 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_6bde0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_3c4b2/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_3c4b2.dir/build.make CMakeFiles/cmTC_3c4b2.dir/build]
-  ignore line: [make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_3c4b2.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_3c4b2.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_3c4b2]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c4b2.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_3c4b2.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_3c4b2 -rdynamic  ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_6bde0/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_6bde0.dir/build.make CMakeFiles/cmTC_6bde0.dir/build]
+  ignore line: [make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_6bde0.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_6bde0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_6bde0]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6bde0.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_6bde0.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_6bde0 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -270,13 +270,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3c4b2' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccA0aDFw.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_3c4b2 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_3c4b2.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6bde0' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccdX46Go.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_6bde0 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_6bde0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccA0aDFw.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccdX46Go.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -294,7 +294,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_3c4b2] ==> ignore
+    arg [cmTC_6bde0] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -306,7 +306,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_3c4b2.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_6bde0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -336,17 +336,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp
+Change Dir: /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f081b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f081b.dir/build.make CMakeFiles/cmTC_f081b.dir/build
-make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f081b.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_f081b.dir/feature_tests.cxx.o -c /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_f081b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f081b.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_f081b.dir/feature_tests.cxx.o  -o cmTC_f081b -rdynamic 
-make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_2b69c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2b69c.dir/build.make CMakeFiles/cmTC_2b69c.dir/build
+make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2b69c.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_2b69c.dir/feature_tests.cxx.o -c /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_2b69c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2b69c.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_2b69c.dir/feature_tests.cxx.o  -o cmTC_2b69c -rdynamic 
+make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -409,17 +409,17 @@ make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFile
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp
+Change Dir: /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_470a2/fast"
-/usr/bin/make -f CMakeFiles/cmTC_470a2.dir/build.make CMakeFiles/cmTC_470a2.dir/build
-make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_470a2.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_470a2.dir/feature_tests.cxx.o -c /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_470a2
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_470a2.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_470a2.dir/feature_tests.cxx.o  -o cmTC_470a2 -rdynamic 
-make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_8828b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8828b.dir/build.make CMakeFiles/cmTC_8828b.dir/build
+make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8828b.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_8828b.dir/feature_tests.cxx.o -c /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_8828b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8828b.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_8828b.dir/feature_tests.cxx.o  -o cmTC_8828b -rdynamic 
+make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -482,17 +482,17 @@ make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFile
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp
+Change Dir: /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_38722/fast"
-/usr/bin/make -f CMakeFiles/cmTC_38722.dir/build.make CMakeFiles/cmTC_38722.dir/build
-make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_38722.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_38722.dir/feature_tests.cxx.o -c /home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_38722
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38722.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_38722.dir/feature_tests.cxx.o  -o cmTC_38722 -rdynamic 
-make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNet_Cpp/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_91650/fast"
+/usr/bin/make -f CMakeFiles/cmTC_91650.dir/build.make CMakeFiles/cmTC_91650.dir/build
+make[1]: Entering directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_91650.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_91650.dir/feature_tests.cxx.o -c /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_91650
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91650.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_91650.dir/feature_tests.cxx.o  -o cmTC_91650 -rdynamic 
+make[1]: Leaving directory '/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
