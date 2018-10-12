@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11 -g   CMakeFiles/test_net.dir/NeuralNet.cpp.o CMakeFiles/test_net.dir/Neuron.cpp.o  -o test_net -rdynamic 
