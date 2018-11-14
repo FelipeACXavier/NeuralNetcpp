@@ -16,12 +16,14 @@ int main()
     Matrix *tmat = mat->transpose();
     tmat->printMatrix();
 
-    Neuron n(-0.4);
+    Neuron n(1);
     n.setActivation('t');
-    std::cout << n.activationFunction(-0.4) << std::endl;
-    n.setActivation('s');
-    std::cout << n.activationFunction(-0.4) << std::endl;
+    std::cout << "t:" << n.activationFunction(0.5) << std::endl;
+    std::cout << "dt:" << n.derivativeFunction(0.5) << std::endl;
     
+    n.setActivation('s');
+    std::cout << "s:" << n.activationFunction(0.5) << std::endl;
+    std::cout << "ds:" << n.derivativeFunction(0.5) << std::endl;
     
     return 0;
 }

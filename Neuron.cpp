@@ -1,30 +1,40 @@
 #include "Neuron.h"
 
-Neuron::Neuron(double x)
+Neuron::Neuron(double initialValue)
 {
-    double a = this->activationFunction(x);
-    this->type = 's';
+	this->bias = randomize(0, 5);
+	this->currentValue = bias;
+	this->error = 0;
 }
 
-double Neuron::activationFunction(double x)
+double Neuron::getValue()
 {
-    if (this->type == 's')
-    {
-        return 1/(1 + exp(-x));
-    }
-    else if (this->type == 'h')
-    {
-        return tanh(x);
-    }
+	return this->currentValue;
 }
 
-void Neuron::setActivation(char type)
+void Neuron::setValue(double x)
 {
-    this->type = type;
+	this->currentValue = sigmoid(x + bias);
+}
+void Neuron::setError(double x)
+{
+	this->error = x - this->currentValue;
+}
+double Neuron::sigmoid(double x)
+{
+	return 1 / (1 + exp(-x));
 }
 
-double Neuron::derivativeActivation(double x)
+double Neuron::dsigmoid(double x)
 {
-    return x*(1 - x);
+	return sigmoid(x)*(1 + sigmoid(x));
 }
 
+// Returns random double to be used for matrix initialization
+double Neuron::randomize(int lower_bound, int upper_bound)
+{
+	std::random_device rd;
+	std::mt19937 gen(rd());
+	std::uniform_real_distribution<double> dis(lower_bound, upper_bound);
+	return dis(gen);
+}
