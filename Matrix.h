@@ -16,17 +16,29 @@ class Matrix
 		// General methods
 		int getRows();
 		int getColumns();
-		Matrix transpose();
-		void print();
-		Matrix haddamart(Matrix myMatrix);
-		static void setCoutPrecision(int x);
+		
 		std::vector<std::vector<double>> matrix;
+
+		Matrix transpose();
+
+		void print();
+		static void printVector(std::vector<double> &myVector);
+		static void printVector(std::vector<Neuron> &myVector);
+		static void setCoutPrecision(int x);
+
+		// Convertions
+		static Matrix toMatrix(std::vector<double> myVector);
+		static Matrix toMatrix(std::vector<Neuron> myVector);
+		static Matrix toMatrix(std::vector<int> myVector);
+		std::vector<double> toVector();
 		
 		// Overloads
 		Matrix operator * (Matrix &mat);
 		Matrix operator * (double x);
 		Matrix operator * (std::vector<double> &mat);
 		Matrix operator * (std::vector<Neuron> &mat);
+		Matrix operator + (Matrix &mat);
+		Matrix operator - (Matrix &mat);
 
 	private:
 		int rows;

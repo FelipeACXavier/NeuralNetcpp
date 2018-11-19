@@ -5,25 +5,65 @@
 
 int main()
 {
-    //std::vector<int> a;a.push_back(2);a.push_back(2);a.push_back(2);
-    //NeuralNet net(a);
+    std::vector<std::vector<double>> inputs = {
+        {0, 0},
+        {0, 1},
+        {1, 0},
+        {1, 1},
+    };
+    std::vector<std::vector<double>> targets = {
+        {1},
+        {0},
+        {0},
+        {1},
+    };
+    std::vector<int> topology = {2, 2, 1};
 
-    Matrix *mat = new Matrix(2,3);
-    mat->printMatrix();
+    NeuralNet mynet = NeuralNet(topology);
+    mynet.printNet();
+    std::cout << "size: " << mynet.netSize << std::endl;
+    //mynet.setLearningRate(0.5);
+    int k = 0;
+    std::srand(std::time(nullptr));
+
+    for(int i = 0; i < 10; i++)
+    {
+        std::cout << "Generation " << i << " >>>>>>> " << std::endl;
+        int j = std::rand()/((RAND_MAX + 1u)/4);
+        mynet.train(inputs[j], targets[j]);
+        // mynet.printNet();
+    }
     
-    std::cout << "---------------" << std::endl;
+    /* mynet.feedForward(inputs[0]);
+    std:: cout << "output 0: " << std::endl;
+    mynet.printNet();
+    std::cout << "----------" << std::endl;
 
-    Matrix *tmat = mat->transpose();
-    tmat->printMatrix();
+    mynet.feedForward(inputs[1]);
+    std:: cout << "output 1: " << std::endl;
+    mynet.printNet();
+    std::cout << "----------" << std::endl;    
 
-    Neuron n(1);
-    n.setActivation('t');
-    std::cout << "t:" << n.activationFunction(0.5) << std::endl;
-    std::cout << "dt:" << n.derivativeFunction(0.5) << std::endl;
-    
-    n.setActivation('s');
-    std::cout << "s:" << n.activationFunction(0.5) << std::endl;
-    std::cout << "ds:" << n.derivativeFunction(0.5) << std::endl;
+    mynet.feedForward(inputs[2]);
+    std:: cout << "output 2: " << std::endl;
+    mynet.printNet();
+    std::cout << "----------" << std::endl;
+
+    mynet.feedForward(inputs[3]);
+    std:: cout << "output 3: " << std::endl;
+    mynet.printNet(); */
+
+    /* Matrix a = Matrix(2, 3);
+    Matrix b = Matrix(3, 1);
+    std::vector<double> d = {1,1,1};
+    Matrix c = a * d;
+
+    a.print();
+    Matrix::printVector(d);
+    b.print();
+    c.print(); */
+
+
     
     return 0;
 }

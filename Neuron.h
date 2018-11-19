@@ -9,18 +9,23 @@
 class Neuron
 {
 	public:
-		Neuron(double initialValue);
+		Neuron();
 		void setValue(double x);
+		void setInput(double x);
 		double getValue();
 		double sigmoid(double x);
 		double dsigmoid(double x);
-		void setError(double x);
+		void setError(double x, int i);
+		void print(double target);
+		double gradient(double rate);
+		double getError();
 		static double randomize(int lower_bound, int upper_bound);
 
 	private:
 		double bias;
 		double currentValue;
 		double error;
+		double Gradient;
 };
 
 #endif

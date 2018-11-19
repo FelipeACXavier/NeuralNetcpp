@@ -8,12 +8,14 @@
 NeuralNet::NeuralNet(std::vector<int> &layers)
 {
 	this->layerSize = layers;
+	this->netSize = layers.size() - 1;
+
 	for (int i = 0; i < this->layerSize.size(); i++)
 	{
 		this->neuralnet.push_back(std::vector<Neuron>());
 		for (int j = 0; j < this->layerSize[i]; j++)
 		{
-			this->neuralnet.back().push_back(Neuron(Neuron::randomize(0,1)));
+			this->neuralnet.back().push_back(Neuron());
 		}
 	}
 	createWeights(layers);
@@ -28,7 +30,7 @@ void NeuralNet::setInput(const std::vector<double> &inputValues)
 {
 	for (int i = 0; i < this->neuralnet[0].size(); i++) 
 	{
-		this->neuralnet[0][i].setValue(inputValues[i]);
+		this->neuralnet[0][i].setInput(inputValues[i]);
 	}
 }
 
@@ -36,8 +38,7 @@ void NeuralNet::setInput(const std::vector<double> &inputValues)
 std::vector<double> NeuralNet::getOutput()
 {
 	std::vector<double> results;
-	int i = 0;
-	for (Neuron n : this->neuralnet.back())
+	for (Neuron &n : this->neuralnet.back())
 	{
 		results.push_back(n.getValue());
 	}
@@ -49,59 +50,109 @@ void NeuralNet::feedForward(const std::vector<double> &inputValues)
 {
 	// Set net input
 	setInput(inputValues);
-	
+	//std::cout << "Before feedforward:" << std::endl;
+	//this->printNet();
 	// Loops through each layer of net
-	for (int i = 0; i < this->layerSize.size() - 1; i++)
+	for (int i = 0; i < this->netSize; i++)
 	{
+		std::vector<double> temp;
+		temp = (weights[i] * this->neuralnet[i]).toVector();
+		/* std::cout << "Vector:" << std::endl;
+		Matrix::printVector(this->neuralnet[i]);
+		std::cout << "Weights:" << std::endl;
+		weights[i].print(); */
+		// Update the values on the neurons
 		int j = 0;
-		Matrix temp = Matrix(this->layerSize[i + 1], 1, 0);
-		Matrix tramp = weights[i].transpose();
-		
-		temp =  tramp * this->neuralnet[i];
-		//temp.print(); Uncomment if you want to see the steps
-
-		// Update the values on the neuron
-		for (Neuron n : this->neuralnet[i + 1])
+		for(Neuron &n : this->neuralnet[i + 1])
 		{
-			n.setValue(temp.matrix[j][0]);
+			n.setValue(temp[j]);
 			j++;
-			//std::cout << n.getValue() << " ";
 		}
+		// std::cout << "Which pass: " << i << std::endl;
 	}
+	//std::cout << "\nAfter feedforward:" << std::endl;
+	//this->printNet();
 }
 
 // Executes the back propagation 
-// learningrate * error x dsigmoid * input^T
+// learning rate * error x dsigmoid * input^T
 void NeuralNet::backPropagation(const std::vector<double> &targets)
 {
-	for(int i = 0; i < this->layerSize.size() - 1; i++)
+	std::vector<double> errorVector;
+	std::vector<double> dsig;
+	
+	// Loop through every layer of the net
+	for(int i = 0; i < this->netSize; i++)
 	{
+		//std::cout << "\nLayer " << i << " --><--" << std::endl;
+		// Calculates the error for each layer/neuron
+		if(i == 0) {
+			// Output errors are passed to the function itself
+			errorVector = targets;
+		} else {
+			// Hidden errors are calculating using the weights and errors from previous layers
+			errorVector = (this->weights[this->netSize-i].transpose() * errorVector).toVector();
+		}
+		//std::cout << "weights: \n";
+		//this->printWeights();
+		// Calculates the error and therefore the gradient for each neuron
+		int j = 0;
+		for(Neuron &n : this->neuralnet[this->netSize-i])
+		{
+			// Target - current value for each neuron
+			n.setError(errorVector[j], i);
+
+			// Learning rate * Error * derivative of activation function
+			dsig.push_back(n.gradient(this->learningRate));
+			if(i == 0)
+			{
+				std::cout << "\nNeuron: " << j << std::endl;
+				n.print(errorVector[j]);
+			}
+			// Update errorVector value for hidden layers
+			errorVector[j] = n.getError();
+			j++;
+		}
+		// Calculate the derivative weight matrix
+		Matrix dsigMat = Matrix::toMatrix(dsig);
+		Matrix layerMat = Matrix::toMatrix(this->neuralnet[this->netSize-1-i]).transpose();
+		Matrix temp = (dsigMat * layerMat);
+
+		// Debugging
+		/* std::cout << "dsigMat: " << std::endl;
+		dsigMat.print();
+		std::cout << "layerMat: " << std::endl;
+		layerMat.print();
+		std::cout << "Temporary: " << std::endl;
+		temp.print(); 
 		
+		std::cout << "----------" << std::endl;
+		std::cout << "\nBefore Update:" << std::endl;
+		this->printWeights();*/
 
+		// Update weights based on calculations
+		updateWeights(this->weights[this->netSize-1-i], temp, this->netSize-1-i);
+		// std::cout << "\nAfter Update:" << std::endl;
+		// this->printWeights();
+		// Reset dsig vector
+		dsig.clear();
 	}
 
-}
-
-void NeuralNet::calculateError(std::vector<Neuron> myLayer, const std::vector<double> &targets)
-{
-	int errorCounter = 0;
-	for(Neuron n : myLayer)
-	{
-		n.setError(targets[errorCounter]);
-		errorCounter++;
-	}
 }
 
 // Initializes the weights with random values
 void NeuralNet::createWeights(std::vector<int> &layers)
 {
-	for (int i = 0; i < layers.size() - 1; i++)
+	for (int i = 0; i < this->netSize; i++)
 	{		
-		weights.push_back(Matrix(layers[i], layers[i + 1]));
+		// Rows are equal to the output layer
+		// Columns are equal to the input layer
+		weights.push_back(Matrix(layers[i+1], layers[i]));
 	}
+	std::cout << "weights length: " << weights.size() << std::endl;
 }
 
-// Print current state of network
+// Print current state of network neurons
 void NeuralNet::printNet()
 {
 	Matrix::setCoutPrecision(3);
@@ -115,7 +166,37 @@ void NeuralNet::printNet()
 	}
 }
 
+// Print weights of neural network	
+void NeuralNet::printWeights()
+{
+	for (int i = 0; i < this->layerSize.size() - 1; i++)
+	{	
+		std::cout << "Weight layer: " << i << std::endl;	
+		this->weights[i].print();
+	}
+}
+
+// Sets the wanted learning rate
 void NeuralNet::setLearningRate(double x)
 {
 	this->learningRate = x;
+}
+
+// Updates weight values based on the gradient descent for each neuron
+void NeuralNet::updateWeights(Matrix weights, Matrix derivative, int l)
+{	
+	this->weights[l] = weights + derivative;
+	/* std::cout << "ouput:" << std::endl;
+	this->weights[l].print();
+	std::cout << "weights:" << std::endl;
+	weights.print();
+	std::cout << "derivative:" << std::endl;
+	derivative.print(); */
+}
+
+// Train the network
+void NeuralNet::train(std::vector<double> inputs, std::vector<double> targets)
+{
+	this->feedForward(inputs);
+	this->backPropagation(targets);
 }

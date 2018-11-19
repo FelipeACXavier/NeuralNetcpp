@@ -19,9 +19,13 @@ class NeuralNet
 		void feedForward(const std::vector<double> &inputValues);
 		void backPropagation(const std::vector<double> &targets);
 		void createWeights(std::vector<int> &layers);
-		void printNet();
 		void setLearningRate(double x);
-		void calculateError(std::vector<Neuron> myLayer, const std::vector<double> &targets);
+		void updateWeights(Matrix weights, Matrix derivative, int l);
+		void train(std::vector<double> inputs, std::vector<double> targets);
+		
+		void printNet();
+		void printWeights();
+		int netSize;
 
 	private:
 		std::vector< std::vector<Neuron> > neuralnet; // neuralnet[layerNum][neuronNum]

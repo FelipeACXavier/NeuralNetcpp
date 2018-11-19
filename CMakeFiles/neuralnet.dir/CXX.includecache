@@ -47,6 +47,10 @@ random
 /home/felipe_xavier/Projects/NeuralNetcpp/main.cpp
 NeuralNet.h
 /home/felipe_xavier/Projects/NeuralNetcpp/NeuralNet.h
+Neuron.h
+/home/felipe_xavier/Projects/NeuralNetcpp/Neuron.h
+Matrix.h
+/home/felipe_xavier/Projects/NeuralNetcpp/Matrix.h
 iostream
 -
 
