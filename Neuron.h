@@ -10,11 +10,12 @@ class Neuron
 {
 	public:
 		Neuron();
-		void setValue(double x);
+		void setValue(double x, char v);
 		void setInput(double x);
+		void setBias(double x);
 		double getValue();
-		double sigmoid(double x);
-		double dsigmoid(double x);
+		double activation(double x, char v);
+		double dactivation(double x);
 		void setError(double x, int i);
 		void print(double target);
 		double gradient(double rate);
@@ -26,6 +27,7 @@ class Neuron
 		double currentValue;
 		double error;
 		double Gradient;
+		char activate;
 };
 
 #endif

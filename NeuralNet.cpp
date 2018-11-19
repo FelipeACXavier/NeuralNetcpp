@@ -30,6 +30,7 @@ void NeuralNet::setInput(const std::vector<double> &inputValues)
 {
 	for (int i = 0; i < this->neuralnet[0].size(); i++) 
 	{
+		this->neuralnet[0][i].setBias(this->bias);
 		this->neuralnet[0][i].setInput(inputValues[i]);
 	}
 }
@@ -45,33 +46,29 @@ std::vector<double> NeuralNet::getOutput()
 	return results;
 }
 
+void NeuralNet::setBias(double x)
+{
+	this->bias = x;
+}
 // Executes the feedforward propagation
 void NeuralNet::feedForward(const std::vector<double> &inputValues)
 {
 	// Set net input
 	setInput(inputValues);
-	//std::cout << "Before feedforward:" << std::endl;
-	//this->printNet();
+
 	// Loops through each layer of net
 	for (int i = 0; i < this->netSize; i++)
 	{
 		std::vector<double> temp;
 		temp = (weights[i] * this->neuralnet[i]).toVector();
-		/* std::cout << "Vector:" << std::endl;
-		Matrix::printVector(this->neuralnet[i]);
-		std::cout << "Weights:" << std::endl;
-		weights[i].print(); */
 		// Update the values on the neurons
 		int j = 0;
 		for(Neuron &n : this->neuralnet[i + 1])
 		{
-			n.setValue(temp[j]);
+			n.setValue(temp[j], this->activeFunc);
 			j++;
 		}
-		// std::cout << "Which pass: " << i << std::endl;
 	}
-	//std::cout << "\nAfter feedforward:" << std::endl;
-	//this->printNet();
 }
 
 // Executes the back propagation 
@@ -84,7 +81,6 @@ void NeuralNet::backPropagation(const std::vector<double> &targets)
 	// Loop through every layer of the net
 	for(int i = 0; i < this->netSize; i++)
 	{
-		//std::cout << "\nLayer " << i << " --><--" << std::endl;
 		// Calculates the error for each layer/neuron
 		if(i == 0) {
 			// Output errors are passed to the function itself
@@ -93,8 +89,6 @@ void NeuralNet::backPropagation(const std::vector<double> &targets)
 			// Hidden errors are calculating using the weights and errors from previous layers
 			errorVector = (this->weights[this->netSize-i].transpose() * errorVector).toVector();
 		}
-		//std::cout << "weights: \n";
-		//this->printWeights();
 		// Calculates the error and therefore the gradient for each neuron
 		int j = 0;
 		for(Neuron &n : this->neuralnet[this->netSize-i])
@@ -104,11 +98,11 @@ void NeuralNet::backPropagation(const std::vector<double> &targets)
 
 			// Learning rate * Error * derivative of activation function
 			dsig.push_back(n.gradient(this->learningRate));
-			if(i == 0)
+			/* if(i == 0)
 			{
 				std::cout << "\nNeuron: " << j << std::endl;
 				n.print(errorVector[j]);
-			}
+			} */
 			// Update errorVector value for hidden layers
 			errorVector[j] = n.getError();
 			j++;
@@ -118,22 +112,9 @@ void NeuralNet::backPropagation(const std::vector<double> &targets)
 		Matrix layerMat = Matrix::toMatrix(this->neuralnet[this->netSize-1-i]).transpose();
 		Matrix temp = (dsigMat * layerMat);
 
-		// Debugging
-		/* std::cout << "dsigMat: " << std::endl;
-		dsigMat.print();
-		std::cout << "layerMat: " << std::endl;
-		layerMat.print();
-		std::cout << "Temporary: " << std::endl;
-		temp.print(); 
-		
-		std::cout << "----------" << std::endl;
-		std::cout << "\nBefore Update:" << std::endl;
-		this->printWeights();*/
-
 		// Update weights based on calculations
 		updateWeights(this->weights[this->netSize-1-i], temp, this->netSize-1-i);
-		// std::cout << "\nAfter Update:" << std::endl;
-		// this->printWeights();
+
 		// Reset dsig vector
 		dsig.clear();
 	}
@@ -186,12 +167,6 @@ void NeuralNet::setLearningRate(double x)
 void NeuralNet::updateWeights(Matrix weights, Matrix derivative, int l)
 {	
 	this->weights[l] = weights + derivative;
-	/* std::cout << "ouput:" << std::endl;
-	this->weights[l].print();
-	std::cout << "weights:" << std::endl;
-	weights.print();
-	std::cout << "derivative:" << std::endl;
-	derivative.print(); */
 }
 
 // Train the network
@@ -199,4 +174,11 @@ void NeuralNet::train(std::vector<double> inputs, std::vector<double> targets)
 {
 	this->feedForward(inputs);
 	this->backPropagation(targets);
+}
+
+// Set which activatios function will be used by the network
+// currently the options are sigmoid or hyperbolic tangent
+void NeuralNet::setActivation(char v)
+{
+	this->activeFunc = v;
 }

@@ -21,12 +21,13 @@ int main()
 
     NeuralNet mynet = NeuralNet(topology);
     mynet.printNet();
-    std::cout << "size: " << mynet.netSize << std::endl;
-    //mynet.setLearningRate(0.5);
-    int k = 0;
+    mynet.setActivation('t');
+    mynet.setBias(0.02);
+    mynet.setLearningRate(0.8);
+
     std::srand(std::time(nullptr));
 
-    for(int i = 0; i < 10; i++)
+    for(int i = 0; i < 10000; i++)
     {
         std::cout << "Generation " << i << " >>>>>>> " << std::endl;
         int j = std::rand()/((RAND_MAX + 1u)/4);
@@ -34,7 +35,7 @@ int main()
         // mynet.printNet();
     }
     
-    /* mynet.feedForward(inputs[0]);
+    mynet.feedForward(inputs[0]);
     std:: cout << "output 0: " << std::endl;
     mynet.printNet();
     std::cout << "----------" << std::endl;
@@ -51,7 +52,7 @@ int main()
 
     mynet.feedForward(inputs[3]);
     std:: cout << "output 3: " << std::endl;
-    mynet.printNet(); */
+    mynet.printNet();
 
     /* Matrix a = Matrix(2, 3);
     Matrix b = Matrix(3, 1);

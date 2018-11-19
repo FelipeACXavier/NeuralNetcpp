@@ -219,13 +219,18 @@ Matrix Matrix::operator * (Matrix &mat)
 Matrix Matrix::operator - (Matrix &mat)
 {
 	Matrix temp = Matrix(this->getRows(), mat.getColumns(), 0);
-
-	for (int i = 0; i < this->getRows(); i++)
+	
+	if(this->getRows() == mat.getRows() && this->getColumns() == mat.getColumns())
 	{
-		for (int j = 0; j < mat.getColumns(); j++)
+		for (int i = 0; i < this->getRows(); i++)
 		{
-				temp.matrix[i][j] += this->matrix[i][j] - mat.matrix[i][j];
+			for (int j = 0; j < mat.getColumns(); j++)
+			{
+					temp.matrix[i][j] += this->matrix[i][j] - mat.matrix[i][j];
+			}
 		}
+	} else {
+		std::cout << "Matrix sizes need to be equal" << std::endl;
 	}
 	return temp;
 }
@@ -235,15 +240,21 @@ Matrix Matrix::operator + (Matrix &mat)
 {
 	Matrix temp = Matrix(this->getRows(), mat.getColumns(), 0);
 
-	for (int i = 0; i < this->getRows(); i++)
+	if(this->getRows() == mat.getRows() && this->getColumns() == mat.getColumns())
 	{
-		for (int j = 0; j < mat.getColumns(); j++)
+		for (int i = 0; i < this->getRows(); i++)
 		{
-				temp.matrix[i][j] += this->matrix[i][j] + mat.matrix[i][j];
+			for (int j = 0; j < mat.getColumns(); j++)
+			{
+					temp.matrix[i][j] += this->matrix[i][j] + mat.matrix[i][j];
+			}
 		}
+	} else {
+		std::cout << "Matrix sizes need to be equal" << std::endl;
 	}
 	return temp;
 }
+
 // Overwrites * so it can be used for matrix with matrix multiplication
 Matrix Matrix::operator * (double x)
 {
