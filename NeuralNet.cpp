@@ -46,10 +46,12 @@ std::vector<double> NeuralNet::getOutput()
 	return results;
 }
 
+// Define bias used to train the network
 void NeuralNet::setBias(double x)
 {
 	this->bias = x;
 }
+
 // Executes the feedforward propagation
 void NeuralNet::feedForward(const std::vector<double> &inputValues)
 {
@@ -181,4 +183,24 @@ void NeuralNet::train(std::vector<double> inputs, std::vector<double> targets)
 void NeuralNet::setActivation(char v)
 {
 	this->activeFunc = v;
+}
+
+void NeuralNet::saveNet(std::string filename)
+{
+	ofstream myfile;
+	myfile.open(filename, ios::out);
+	myfile << "Bias: " << this->bias;
+	counter = 0;
+	for(Matrix &m : this->weights)
+	{
+		myfile << "weights: " << counter << "\n";
+		m.saveMatrix(myfile);
+		counter++;
+	}
+	myfile.close();
+}
+
+void NeuralNet::loadNet(std::string filename)
+{
+
 }

@@ -3,6 +3,7 @@
 #define Matrix_H
 
 #include <vector>
+#include <fstream>
 #include <iomanip>
 #include "Neuron.h"
 
@@ -20,7 +21,7 @@ class Matrix
 		std::vector<std::vector<double>> matrix;
 
 		Matrix transpose();
-
+		void saveMatrix(ofstream filename);
 		void print();
 		static void printVector(std::vector<double> &myVector);
 		static void printVector(std::vector<Neuron> &myVector);

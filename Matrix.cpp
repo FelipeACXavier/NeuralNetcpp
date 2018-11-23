@@ -145,6 +145,18 @@ void Matrix::printVector(std::vector<Neuron> &myVector)
 		std::cout << "Value " << i << ": " << myVector[i].getValue() << std::endl;
 	}
 }
+
+void Matrix::saveMatrix(ofstream filename)
+{
+	for(int i = 0; i < this->getRows(); i++)
+	{
+		for(int j = 0; i < this->getColumns(); j++)
+		{
+			filename << this->matrix[i][j];
+		}
+		filename << "\n";
+	}
+}
 // --------------------------------------------------------------- //
 // -------------------------- Overloads -------------------------- //
 // --------------------------------------------------------------- //

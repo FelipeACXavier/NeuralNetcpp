@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <vector>
+#include <fstream>
 #include "Neuron.h"
 #include "Matrix.h"
 
@@ -26,8 +27,8 @@ class NeuralNet
 		void printNet();
 		void printWeights();
 
-		void saveNet();
-		void loadNet();
+		void saveNet(std::string filename);
+		void loadNet(std::string filename);
 
 		std::vector<double> getOutput();
 
