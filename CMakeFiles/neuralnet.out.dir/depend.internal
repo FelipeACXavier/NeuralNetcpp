@@ -3,18 +3,18 @@
 
 CMakeFiles/neuralnet.out.dir/Main.cpp.o
  /home/felipe_xavier/Projects/NeuralNetcpp/Main.cpp
- /home/felipe_xavier/Projects/NeuralNetcpp/Matrix.h
- /home/felipe_xavier/Projects/NeuralNetcpp/NeuralNet.h
- /home/felipe_xavier/Projects/NeuralNetcpp/Neuron.h
-CMakeFiles/neuralnet.out.dir/Matrix.cpp.o
- /home/felipe_xavier/Projects/NeuralNetcpp/Matrix.cpp
- /home/felipe_xavier/Projects/NeuralNetcpp/Matrix.h
- /home/felipe_xavier/Projects/NeuralNetcpp/Neuron.h
-CMakeFiles/neuralnet.out.dir/NeuralNet.cpp.o
- /home/felipe_xavier/Projects/NeuralNetcpp/Matrix.h
- /home/felipe_xavier/Projects/NeuralNetcpp/NeuralNet.cpp
- /home/felipe_xavier/Projects/NeuralNetcpp/NeuralNet.h
- /home/felipe_xavier/Projects/NeuralNetcpp/Neuron.h
-CMakeFiles/neuralnet.out.dir/Neuron.cpp.o
- /home/felipe_xavier/Projects/NeuralNetcpp/Neuron.cpp
- /home/felipe_xavier/Projects/NeuralNetcpp/Neuron.h
+ /home/felipe_xavier/Projects/NeuralNetcpp/headers/Matrix.h
+ /home/felipe_xavier/Projects/NeuralNetcpp/headers/NeuralNet.h
+ /home/felipe_xavier/Projects/NeuralNetcpp/headers/Neuron.h
+CMakeFiles/neuralnet.out.dir/sources/Matrix.cpp.o
+ /home/felipe_xavier/Projects/NeuralNetcpp/headers/Matrix.h
+ /home/felipe_xavier/Projects/NeuralNetcpp/headers/Neuron.h
+ /home/felipe_xavier/Projects/NeuralNetcpp/sources/Matrix.cpp
+CMakeFiles/neuralnet.out.dir/sources/NeuralNet.cpp.o
+ /home/felipe_xavier/Projects/NeuralNetcpp/headers/Matrix.h
+ /home/felipe_xavier/Projects/NeuralNetcpp/headers/NeuralNet.h
+ /home/felipe_xavier/Projects/NeuralNetcpp/headers/Neuron.h
+ /home/felipe_xavier/Projects/NeuralNetcpp/sources/NeuralNet.cpp
+CMakeFiles/neuralnet.out.dir/sources/Neuron.cpp.o
+ /home/felipe_xavier/Projects/NeuralNetcpp/headers/Neuron.h
+ /home/felipe_xavier/Projects/NeuralNetcpp/sources/Neuron.cpp

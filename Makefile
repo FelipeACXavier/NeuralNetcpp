@@ -150,86 +150,86 @@ Main.cpp.s:
 	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/Main.cpp.s
 .PHONY : Main.cpp.s
 
-Matrix.o: Matrix.cpp.o
+sources/Matrix.o: sources/Matrix.cpp.o
 
-.PHONY : Matrix.o
-
-# target to build an object file
-Matrix.cpp.o:
-	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/Matrix.cpp.o
-.PHONY : Matrix.cpp.o
-
-Matrix.i: Matrix.cpp.i
-
-.PHONY : Matrix.i
-
-# target to preprocess a source file
-Matrix.cpp.i:
-	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/Matrix.cpp.i
-.PHONY : Matrix.cpp.i
-
-Matrix.s: Matrix.cpp.s
-
-.PHONY : Matrix.s
-
-# target to generate assembly for a file
-Matrix.cpp.s:
-	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/Matrix.cpp.s
-.PHONY : Matrix.cpp.s
-
-NeuralNet.o: NeuralNet.cpp.o
-
-.PHONY : NeuralNet.o
+.PHONY : sources/Matrix.o
 
 # target to build an object file
-NeuralNet.cpp.o:
-	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/NeuralNet.cpp.o
-.PHONY : NeuralNet.cpp.o
+sources/Matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/sources/Matrix.cpp.o
+.PHONY : sources/Matrix.cpp.o
 
-NeuralNet.i: NeuralNet.cpp.i
+sources/Matrix.i: sources/Matrix.cpp.i
 
-.PHONY : NeuralNet.i
+.PHONY : sources/Matrix.i
 
 # target to preprocess a source file
-NeuralNet.cpp.i:
-	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/NeuralNet.cpp.i
-.PHONY : NeuralNet.cpp.i
+sources/Matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/sources/Matrix.cpp.i
+.PHONY : sources/Matrix.cpp.i
 
-NeuralNet.s: NeuralNet.cpp.s
+sources/Matrix.s: sources/Matrix.cpp.s
 
-.PHONY : NeuralNet.s
+.PHONY : sources/Matrix.s
 
 # target to generate assembly for a file
-NeuralNet.cpp.s:
-	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/NeuralNet.cpp.s
-.PHONY : NeuralNet.cpp.s
+sources/Matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/sources/Matrix.cpp.s
+.PHONY : sources/Matrix.cpp.s
 
-Neuron.o: Neuron.cpp.o
+sources/NeuralNet.o: sources/NeuralNet.cpp.o
 
-.PHONY : Neuron.o
+.PHONY : sources/NeuralNet.o
 
 # target to build an object file
-Neuron.cpp.o:
-	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/Neuron.cpp.o
-.PHONY : Neuron.cpp.o
+sources/NeuralNet.cpp.o:
+	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/sources/NeuralNet.cpp.o
+.PHONY : sources/NeuralNet.cpp.o
 
-Neuron.i: Neuron.cpp.i
+sources/NeuralNet.i: sources/NeuralNet.cpp.i
 
-.PHONY : Neuron.i
+.PHONY : sources/NeuralNet.i
 
 # target to preprocess a source file
-Neuron.cpp.i:
-	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/Neuron.cpp.i
-.PHONY : Neuron.cpp.i
+sources/NeuralNet.cpp.i:
+	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/sources/NeuralNet.cpp.i
+.PHONY : sources/NeuralNet.cpp.i
 
-Neuron.s: Neuron.cpp.s
+sources/NeuralNet.s: sources/NeuralNet.cpp.s
 
-.PHONY : Neuron.s
+.PHONY : sources/NeuralNet.s
 
 # target to generate assembly for a file
-Neuron.cpp.s:
-	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/Neuron.cpp.s
-.PHONY : Neuron.cpp.s
+sources/NeuralNet.cpp.s:
+	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/sources/NeuralNet.cpp.s
+.PHONY : sources/NeuralNet.cpp.s
+
+sources/Neuron.o: sources/Neuron.cpp.o
+
+.PHONY : sources/Neuron.o
+
+# target to build an object file
+sources/Neuron.cpp.o:
+	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/sources/Neuron.cpp.o
+.PHONY : sources/Neuron.cpp.o
+
+sources/Neuron.i: sources/Neuron.cpp.i
+
+.PHONY : sources/Neuron.i
+
+# target to preprocess a source file
+sources/Neuron.cpp.i:
+	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/sources/Neuron.cpp.i
+.PHONY : sources/Neuron.cpp.i
+
+sources/Neuron.s: sources/Neuron.cpp.s
+
+.PHONY : sources/Neuron.s
+
+# target to generate assembly for a file
+sources/Neuron.cpp.s:
+	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/sources/Neuron.cpp.s
+.PHONY : sources/Neuron.cpp.s
 
 # Help Target
 help:
@@ -243,15 +243,15 @@ help:
 	@echo "... Main.o"
 	@echo "... Main.i"
 	@echo "... Main.s"
-	@echo "... Matrix.o"
-	@echo "... Matrix.i"
-	@echo "... Matrix.s"
-	@echo "... NeuralNet.o"
-	@echo "... NeuralNet.i"
-	@echo "... NeuralNet.s"
-	@echo "... Neuron.o"
-	@echo "... Neuron.i"
-	@echo "... Neuron.s"
+	@echo "... sources/Matrix.o"
+	@echo "... sources/Matrix.i"
+	@echo "... sources/Matrix.s"
+	@echo "... sources/NeuralNet.o"
+	@echo "... sources/NeuralNet.i"
+	@echo "... sources/NeuralNet.s"
+	@echo "... sources/Neuron.o"
+	@echo "... sources/Neuron.i"
+	@echo "... sources/Neuron.s"
 .PHONY : help
 
 

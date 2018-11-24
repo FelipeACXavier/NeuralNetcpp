@@ -8,7 +8,7 @@ project(NeuralNetcpp)
 add_executable(
     neuralnet.out
     Main.cpp
-    Matrix.cpp
-    NeuralNet.cpp
-    Neuron.cpp
+    sources/Matrix.cpp
+    sources/NeuralNet.cpp
+    sources/Neuron.cpp
 )

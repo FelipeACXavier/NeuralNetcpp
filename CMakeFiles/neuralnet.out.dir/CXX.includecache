@@ -7,18 +7,14 @@
 #IncludeRegexTransform: 
 
 /home/felipe_xavier/Projects/NeuralNetcpp/Main.cpp
-NeuralNet.h
-/home/felipe_xavier/Projects/NeuralNetcpp/NeuralNet.h
+headers/NeuralNet.h
+/home/felipe_xavier/Projects/NeuralNetcpp/headers/NeuralNet.h
 iostream
 -
 stdio.h
 /home/felipe_xavier/Projects/NeuralNetcpp/stdio.h
 
-/home/felipe_xavier/Projects/NeuralNetcpp/Matrix.cpp
-Matrix.h
-/home/felipe_xavier/Projects/NeuralNetcpp/Matrix.h
-
-/home/felipe_xavier/Projects/NeuralNetcpp/Matrix.h
+/home/felipe_xavier/Projects/NeuralNetcpp/headers/Matrix.h
 vector
 -
 fstream
@@ -26,13 +22,9 @@ fstream
 iomanip
 -
 Neuron.h
-/home/felipe_xavier/Projects/NeuralNetcpp/Neuron.h
+/home/felipe_xavier/Projects/NeuralNetcpp/headers/Neuron.h
 
-/home/felipe_xavier/Projects/NeuralNetcpp/NeuralNet.cpp
-NeuralNet.h
-/home/felipe_xavier/Projects/NeuralNetcpp/NeuralNet.h
-
-/home/felipe_xavier/Projects/NeuralNetcpp/NeuralNet.h
+/home/felipe_xavier/Projects/NeuralNetcpp/headers/NeuralNet.h
 iostream
 -
 vector
@@ -42,19 +34,27 @@ fstream
 sstream
 -
 Neuron.h
-/home/felipe_xavier/Projects/NeuralNetcpp/Neuron.h
+/home/felipe_xavier/Projects/NeuralNetcpp/headers/Neuron.h
 Matrix.h
-/home/felipe_xavier/Projects/NeuralNetcpp/Matrix.h
+/home/felipe_xavier/Projects/NeuralNetcpp/headers/Matrix.h
 
-/home/felipe_xavier/Projects/NeuralNetcpp/Neuron.cpp
-Neuron.h
-/home/felipe_xavier/Projects/NeuralNetcpp/Neuron.h
-
-/home/felipe_xavier/Projects/NeuralNetcpp/Neuron.h
+/home/felipe_xavier/Projects/NeuralNetcpp/headers/Neuron.h
 iostream
 -
 math.h
 -
 random
 -
+
+/home/felipe_xavier/Projects/NeuralNetcpp/sources/Matrix.cpp
+../headers/Matrix.h
+/home/felipe_xavier/Projects/NeuralNetcpp/headers/Matrix.h
+
+/home/felipe_xavier/Projects/NeuralNetcpp/sources/NeuralNet.cpp
+../headers/NeuralNet.h
+/home/felipe_xavier/Projects/NeuralNetcpp/headers/NeuralNet.h
+
+/home/felipe_xavier/Projects/NeuralNetcpp/sources/Neuron.cpp
+../headers/Neuron.h
+/home/felipe_xavier/Projects/NeuralNetcpp/headers/Neuron.h
 

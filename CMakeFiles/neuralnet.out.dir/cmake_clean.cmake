@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/neuralnet.out.dir/Main.cpp.o"
-  "CMakeFiles/neuralnet.out.dir/Matrix.cpp.o"
-  "CMakeFiles/neuralnet.out.dir/NeuralNet.cpp.o"
-  "CMakeFiles/neuralnet.out.dir/Neuron.cpp.o"
+  "CMakeFiles/neuralnet.out.dir/sources/Matrix.cpp.o"
+  "CMakeFiles/neuralnet.out.dir/sources/NeuralNet.cpp.o"
+  "CMakeFiles/neuralnet.out.dir/sources/Neuron.cpp.o"
   "neuralnet.out.pdb"
   "neuralnet.out"
 )
