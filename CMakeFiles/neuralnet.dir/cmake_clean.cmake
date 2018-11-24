@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/neuralnet.dir/main.cpp.o"
+  "CMakeFiles/neuralnet.dir/Main.cpp.o"
   "CMakeFiles/neuralnet.dir/Matrix.cpp.o"
   "CMakeFiles/neuralnet.dir/NeuralNet.cpp.o"
   "CMakeFiles/neuralnet.dir/Neuron.cpp.o"

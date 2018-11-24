@@ -15,12 +15,10 @@ class Matrix
 		Matrix(int rows, int cols, int zero);
 		Matrix(std::vector<double> myVector, int rows, int cols);
 
-		// General methods
+		// Getters
 		int getRows();
 		int getColumns();
 		
-		std::vector<std::vector<double>> matrix;
-
 		Matrix transpose();
 		void saveMatrix(std::ofstream &filename);
 		void print();
@@ -37,12 +35,15 @@ class Matrix
 		
 		// Overloads
 		Matrix operator * (Matrix &mat);
+		Matrix operator / (Matrix &mat);
 		Matrix operator * (double x);
 		Matrix operator * (std::vector<double> &mat);
 		Matrix operator * (std::vector<Neuron> &mat);
 		Matrix operator + (Matrix &mat);
 		Matrix operator - (Matrix &mat);
 
+		// Variables
+		std::vector<std::vector<double>> matrix;
 	private:
 		int rows;
 		int columns;

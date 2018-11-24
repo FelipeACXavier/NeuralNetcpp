@@ -53,24 +53,9 @@ Matrix::Matrix(std::vector<double> myVector, int rows, int cols)
 		}
 	}
 }
-
 // --------------------------------------------------------------- //
-// ------------------------ Other Methods ------------------------ //
+// ------------------------ Print Methods ------------------------ //
 // --------------------------------------------------------------- //
-
-// Returns a matrix which is the transpose of the matrix which called the function
-Matrix Matrix::transpose()
-{
-	Matrix* a = new Matrix(this->columns, this->rows);
-	for(int i = 0; i < this->rows; i++)
-	{
-		for (int j = 0; j < this->columns; j++)
-		{
-			a->matrix[j][i] = this->matrix[i][j];
-		}
-	}
-	return *a;
-}
 
 // Used to print matrix which calls the function matrix.print()
 void Matrix::print()
@@ -86,20 +71,44 @@ void Matrix::print()
 	}
 	std::cout << std::endl;
 }
-
-// Return number of rows in matrix
-int Matrix::getRows()
+// Print double vectors 
+void Matrix::printVector(std::vector<double> &myVector)
 {
-	return this->rows;
+	Matrix::setCoutPrecision(3);
+	std::cout << "Vector: ";
+	for (int i = 0; i < myVector.size(); i++)
+	{
+		std::cout << myVector[i] << ' ';
+	}
+	std::cout << std::endl;
 }
-
-// Return number of columns in matrix
-int Matrix::getColumns()
+// Print int vectors 
+void Matrix::printVector(std::vector<int> &myVector)
 {
-	return this->columns;
+	Matrix::setCoutPrecision(3);
+	std::cout << "Vector: ";
+	for (int i = 0; i < myVector.size(); i++)
+	{
+		std::cout << myVector[i] << ' ';
+	}
+	std::cout << std::endl;
 }
+// Print Neuron vectors 
+void Matrix::printVector(std::vector<Neuron> &myVector)
+{
+	Matrix::setCoutPrecision(3);
+	std::cout << "Vector: ";
+	for (int i = 0; i < myVector.size(); i++)
+	{
+		std::cout << myVector[i].getValue() << ' ';
+	}
+	std::cout << std::endl;
+}
+// --------------------------------------------------------------- //
+// ------------------------- Conversions --------------------------//
+// --------------------------------------------------------------- //
 
-// Coverts a vector into a matrix object
+// Coverts a double vector into a matrix object
 Matrix Matrix::toMatrix(std::vector<double> myVector)
 {
 	Matrix temp = Matrix(myVector.size(), 1, 0);
@@ -110,6 +119,7 @@ Matrix Matrix::toMatrix(std::vector<double> myVector)
 	return temp;
 }
 
+// Coverts a neuron vector into a matrix object
 Matrix Matrix::toMatrix(std::vector<Neuron> myVector)
 {
 	Matrix temp = Matrix(myVector.size(), 1, 0);
@@ -120,6 +130,7 @@ Matrix Matrix::toMatrix(std::vector<Neuron> myVector)
 	return temp;
 }
 
+// Coverts a int vector into a matrix object
 Matrix Matrix::toMatrix(std::vector<int> myVector)
 {
 	Matrix temp = Matrix(myVector.size(), 1, 0);
@@ -128,13 +139,6 @@ Matrix Matrix::toMatrix(std::vector<int> myVector)
 		temp.matrix[i][0] = myVector[i];
 	}
 	return temp;
-}
-//--------------------------------------
-// Set how many decimals will be printed 
-void Matrix::setCoutPrecision(int x)
-{
-	std::cout << std::fixed;
-	std::cout << std::setprecision(x);
 }
 
 // Converts matrix to columns vector
@@ -148,31 +152,43 @@ std::vector<double> Matrix::toVector()
 	return temp;
 }
 
-// Print Vectors 
-void Matrix::printVector(std::vector<double> &myVector)
+// --------------------------------------------------------------- //
+// ---------------------- Multi-Use Methods ---------------------- //
+// --------------------------------------------------------------- //
+
+// --------------------------- Getters --------------------------- //
+// Return number of rows in matrix
+int Matrix::getRows()
 {
-	for (int i = 0; i < myVector.size(); i++)
-	{
-		std::cout << "Value " << i << ": " << myVector[i] << std::endl;
-	}
+	return this->rows;
 }
 
-void Matrix::printVector(std::vector<int> &myVector)
+// Return number of columns in matrix
+int Matrix::getColumns()
 {
-	for (int i = 0; i < myVector.size(); i++)
-	{
-		std::cout << "Value " << i << ": " << myVector[i] << std::endl;
-	}
+	return this->columns;
 }
-
-void Matrix::printVector(std::vector<Neuron> &myVector)
+// ------------------------- Other methods  ---------------------- //
+// Returns a matrix which is the transpose of the matrix which called the function
+Matrix Matrix::transpose()
 {
-	for (int i = 0; i < myVector.size(); i++)
+	Matrix* a = new Matrix(this->columns, this->rows);
+	for(int i = 0; i < this->rows; i++)
 	{
-		std::cout << "Value " << i << ": " << myVector[i].getValue() << std::endl;
+		for (int j = 0; j < this->columns; j++)
+		{
+			a->matrix[j][i] = this->matrix[i][j];
+		}
 	}
+	return *a;
 }
-//--------------------------------------
+// Set how many decimals will be printed 
+void Matrix::setCoutPrecision(int x)
+{
+	std::cout << std::fixed;
+	std::cout << std::setprecision(x);
+}
+// ---------------------- Dealing with files ---------------------- //
 // Saves matrix in txt format for further use
 void Matrix::saveMatrix(std::ofstream &filename)
 {
@@ -259,7 +275,7 @@ Matrix Matrix::operator * (Matrix &mat)
 	return temp;
 }
 
-// Overwrites - so it can be used for matrix with matrix multiplication
+// Overwrites - so it can be used for matrix with matrix subtraction
 Matrix Matrix::operator - (Matrix &mat)
 {
 	Matrix temp = Matrix(this->getRows(), mat.getColumns(), 0);
@@ -279,7 +295,7 @@ Matrix Matrix::operator - (Matrix &mat)
 	return temp;
 }
 
-// Overwrites + so it can be used for matrix with matrix multiplication
+// Overwrites + so it can be used for matrix with matrix addition
 Matrix Matrix::operator + (Matrix &mat)
 {
 	Matrix temp = Matrix(this->getRows(), mat.getColumns(), 0);
@@ -310,6 +326,30 @@ Matrix Matrix::operator * (double x)
 		{
 			temp.matrix[i][j] += this->matrix[i][j] * x;
 		}
+	}
+	return temp;
+}
+
+// Overwrites * so it can be used for matrix with matrix division
+Matrix Matrix::operator / (Matrix &mat)
+{
+	Matrix temp = Matrix(this->getRows(), mat.getColumns(), 0);
+	Matrix trps = mat.transpose();
+
+	if (this->getColumns() == trps.getRows())
+	{
+		for (int i = 0; i < this->getRows(); i++)
+		{
+			for (int j = 0; j < trps.getColumns(); j++)
+			{
+				for (int k = 0; k < this->getColumns(); k++)
+				{
+					temp.matrix[i][j] += this->matrix[i][k] * trps.matrix[k][j];
+				}
+			}
+		}
+	} else {
+		std::cout << "Cannot divide: " << this->getColumns() << " and " << trps.getRows() << std::endl;
 	}
 	return temp;
 }

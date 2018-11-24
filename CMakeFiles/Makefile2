@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/felipe_xavier/Projects/NeuralNetcpp
 CMAKE_BINARY_DIR = /home/felipe_xavier/Projects/NeuralNetcpp
 
 #=============================================================================
-# Target rules for target CMakeFiles/neuralnet.dir
+# Target rules for target CMakeFiles/neuralnet.out.dir
 
 # All Build rule for target.
-CMakeFiles/neuralnet.dir/all:
-	$(MAKE) -f CMakeFiles/neuralnet.dir/build.make CMakeFiles/neuralnet.dir/depend
-	$(MAKE) -f CMakeFiles/neuralnet.dir/build.make CMakeFiles/neuralnet.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles --progress-num=1,2,3,4,5 "Built target neuralnet"
-.PHONY : CMakeFiles/neuralnet.dir/all
+CMakeFiles/neuralnet.out.dir/all:
+	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/depend
+	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles --progress-num=1,2,3,4,5 "Built target neuralnet.out"
+.PHONY : CMakeFiles/neuralnet.out.dir/all
 
 # Include target in all.
-all: CMakeFiles/neuralnet.dir/all
+all: CMakeFiles/neuralnet.out.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/neuralnet.dir/rule: cmake_check_build_system
+CMakeFiles/neuralnet.out.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles 5
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/neuralnet.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/neuralnet.out.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles 0
-.PHONY : CMakeFiles/neuralnet.dir/rule
+.PHONY : CMakeFiles/neuralnet.out.dir/rule
 
 # Convenience name for target.
-neuralnet: CMakeFiles/neuralnet.dir/rule
+neuralnet.out: CMakeFiles/neuralnet.out.dir/rule
 
-.PHONY : neuralnet
-
-# clean rule for target.
-CMakeFiles/neuralnet.dir/clean:
-	$(MAKE) -f CMakeFiles/neuralnet.dir/build.make CMakeFiles/neuralnet.dir/clean
-.PHONY : CMakeFiles/neuralnet.dir/clean
+.PHONY : neuralnet.out
 
 # clean rule for target.
-clean: CMakeFiles/neuralnet.dir/clean
+CMakeFiles/neuralnet.out.dir/clean:
+	$(MAKE) -f CMakeFiles/neuralnet.out.dir/build.make CMakeFiles/neuralnet.out.dir/clean
+.PHONY : CMakeFiles/neuralnet.out.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/neuralnet.out.dir/clean
 
 .PHONY : clean
 

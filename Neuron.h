@@ -9,17 +9,27 @@
 class Neuron
 {
 	public:
+		// Constructor
 		Neuron();
-		void setValue(double x, char v);
-		void setInput(double x);
+
+		// Setters
 		void setBias(double x);
-		double getValue();
-		double activation(double x, char v);
-		double dactivation(double x);
+		void setInput(double x);
 		void setError(double x, int i);
-		void print(double target);
-		double gradient(double rate);
+		void setValue(double x, char v);
+		
+		// Getters
+		double getBias();
 		double getError();
+		double getValue();
+
+		// Learning methods
+		double dactivation(double x);
+		double gradient(double rate);
+		double activation(double x, char v);
+
+		// Extra methods
+		void print(double target);
 		static double randomize(int lower_bound, int upper_bound);
 
 	private:

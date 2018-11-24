@@ -14,14 +14,20 @@ Neuron::Neuron()
 // --------------------------------------------------------------- //
 // --------------------------- Setters --------------------------- //
 // --------------------------------------------------------------- //
+
+// Set the current value of neuron
 void Neuron::setValue(double x, char v)
 {
 	this->currentValue = activation(x, v);
 }
+
+// Set neuron as an input neuron
 void Neuron::setInput(double x)
 {
 	this->currentValue = x + this->bias;
 }
+
+// Set the error (target - current value)
 void Neuron::setError(double x, int i)
 {
 	if (i == 0)
@@ -29,6 +35,8 @@ void Neuron::setError(double x, int i)
 	else
 		this->error = x;
 }
+
+// Set the bias 
 void Neuron::setBias(double x)
 {
 	this->bias = x;
@@ -37,18 +45,29 @@ void Neuron::setBias(double x)
 // --------------------------------------------------------------- //
 // --------------------------- Getters --------------------------- //
 // --------------------------------------------------------------- //
+
+// Returns the current value
 double Neuron::getValue()
 {
 	return this->currentValue;
 }
+
+// Returns the Error
 double Neuron::getError()
 {
 	return this->error;
 }
 
+// Returns the bias
+double Neuron::getBias()
+{
+	return this->bias;
+}
 // --------------------------------------------------------------- //
-// ------------------------ Other Methods ------------------------ //
+// ---------------------- Learning Methods ----------------------- //
 // --------------------------------------------------------------- //
+
+// Calcultaes de desired activation function
 double Neuron::activation(double x, char v)
 {
 	this->activate = v;
@@ -61,6 +80,7 @@ double Neuron::activation(double x, char v)
 		return 0;
 	}
 }
+// Calculates the derivative of the desired activation
 double Neuron::dactivation(double x)
 {
 	if(this->activate == 's'){
@@ -68,7 +88,7 @@ double Neuron::dactivation(double x)
 	} else if (this->activate == 't'){
 		return 1 - (x*x);
 	} else {
-		std::cout << "Not a valid activation function\nHas this neuron been actiavted yet?" << std::endl;
+		std::cout << "Not a valid activation function\nHas this neuron been activated yet?" << std::endl;
 		return 0;
 	}
 }
@@ -80,6 +100,10 @@ double Neuron::gradient(double rate)
 	this->bias = this->bias + this->Gradient;
 	return this->Gradient;
 }
+// --------------------------------------------------------------- //
+// ------------------------ Other Methods ------------------------ //
+// --------------------------------------------------------------- //
+
 // Returns random double to be used for matrix initialization
 double Neuron::randomize(int lower_bound, int upper_bound)
 {
@@ -88,6 +112,7 @@ double Neuron::randomize(int lower_bound, int upper_bound)
 	std::uniform_real_distribution<> dis(lower_bound, upper_bound);
 	return dis(gen);
 }
+// Prints all the data from the neuron
 void Neuron::print(double target)
 {
 	std::cout << "Value: " << this->currentValue << std::endl;

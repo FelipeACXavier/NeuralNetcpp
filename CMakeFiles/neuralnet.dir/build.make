@@ -57,28 +57,28 @@ include CMakeFiles/neuralnet.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/neuralnet.dir/flags.make
 
-CMakeFiles/neuralnet.dir/main.cpp.o: CMakeFiles/neuralnet.dir/flags.make
-CMakeFiles/neuralnet.dir/main.cpp.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/neuralnet.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neuralnet.dir/main.cpp.o -c /home/felipe_xavier/Projects/NeuralNetcpp/main.cpp
+CMakeFiles/neuralnet.dir/Main.cpp.o: CMakeFiles/neuralnet.dir/flags.make
+CMakeFiles/neuralnet.dir/Main.cpp.o: Main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/felipe_xavier/Projects/NeuralNetcpp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/neuralnet.dir/Main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neuralnet.dir/Main.cpp.o -c /home/felipe_xavier/Projects/NeuralNetcpp/Main.cpp
 
-CMakeFiles/neuralnet.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neuralnet.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felipe_xavier/Projects/NeuralNetcpp/main.cpp > CMakeFiles/neuralnet.dir/main.cpp.i
+CMakeFiles/neuralnet.dir/Main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neuralnet.dir/Main.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felipe_xavier/Projects/NeuralNetcpp/Main.cpp > CMakeFiles/neuralnet.dir/Main.cpp.i
 
-CMakeFiles/neuralnet.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neuralnet.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felipe_xavier/Projects/NeuralNetcpp/main.cpp -o CMakeFiles/neuralnet.dir/main.cpp.s
+CMakeFiles/neuralnet.dir/Main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neuralnet.dir/Main.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felipe_xavier/Projects/NeuralNetcpp/Main.cpp -o CMakeFiles/neuralnet.dir/Main.cpp.s
 
-CMakeFiles/neuralnet.dir/main.cpp.o.requires:
+CMakeFiles/neuralnet.dir/Main.cpp.o.requires:
 
-.PHONY : CMakeFiles/neuralnet.dir/main.cpp.o.requires
+.PHONY : CMakeFiles/neuralnet.dir/Main.cpp.o.requires
 
-CMakeFiles/neuralnet.dir/main.cpp.o.provides: CMakeFiles/neuralnet.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/neuralnet.dir/build.make CMakeFiles/neuralnet.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/neuralnet.dir/main.cpp.o.provides
+CMakeFiles/neuralnet.dir/Main.cpp.o.provides: CMakeFiles/neuralnet.dir/Main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/neuralnet.dir/build.make CMakeFiles/neuralnet.dir/Main.cpp.o.provides.build
+.PHONY : CMakeFiles/neuralnet.dir/Main.cpp.o.provides
 
-CMakeFiles/neuralnet.dir/main.cpp.o.provides.build: CMakeFiles/neuralnet.dir/main.cpp.o
+CMakeFiles/neuralnet.dir/Main.cpp.o.provides.build: CMakeFiles/neuralnet.dir/Main.cpp.o
 
 
 CMakeFiles/neuralnet.dir/Matrix.cpp.o: CMakeFiles/neuralnet.dir/flags.make
@@ -155,7 +155,7 @@ CMakeFiles/neuralnet.dir/Neuron.cpp.o.provides.build: CMakeFiles/neuralnet.dir/N
 
 # Object files for target neuralnet
 neuralnet_OBJECTS = \
-"CMakeFiles/neuralnet.dir/main.cpp.o" \
+"CMakeFiles/neuralnet.dir/Main.cpp.o" \
 "CMakeFiles/neuralnet.dir/Matrix.cpp.o" \
 "CMakeFiles/neuralnet.dir/NeuralNet.cpp.o" \
 "CMakeFiles/neuralnet.dir/Neuron.cpp.o"
@@ -163,7 +163,7 @@ neuralnet_OBJECTS = \
 # External object files for target neuralnet
 neuralnet_EXTERNAL_OBJECTS =
 
-neuralnet: CMakeFiles/neuralnet.dir/main.cpp.o
+neuralnet: CMakeFiles/neuralnet.dir/Main.cpp.o
 neuralnet: CMakeFiles/neuralnet.dir/Matrix.cpp.o
 neuralnet: CMakeFiles/neuralnet.dir/NeuralNet.cpp.o
 neuralnet: CMakeFiles/neuralnet.dir/Neuron.cpp.o
@@ -177,7 +177,7 @@ CMakeFiles/neuralnet.dir/build: neuralnet
 
 .PHONY : CMakeFiles/neuralnet.dir/build
 
-CMakeFiles/neuralnet.dir/requires: CMakeFiles/neuralnet.dir/main.cpp.o.requires
+CMakeFiles/neuralnet.dir/requires: CMakeFiles/neuralnet.dir/Main.cpp.o.requires
 CMakeFiles/neuralnet.dir/requires: CMakeFiles/neuralnet.dir/Matrix.cpp.o.requires
 CMakeFiles/neuralnet.dir/requires: CMakeFiles/neuralnet.dir/NeuralNet.cpp.o.requires
 CMakeFiles/neuralnet.dir/requires: CMakeFiles/neuralnet.dir/Neuron.cpp.o.requires
