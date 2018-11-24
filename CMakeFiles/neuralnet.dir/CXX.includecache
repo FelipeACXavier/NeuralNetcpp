@@ -13,6 +13,8 @@ Matrix.h
 /home/felipe_xavier/Projects/NeuralNetcpp/Matrix.h
 vector
 -
+fstream
+-
 iomanip
 -
 Neuron.h
@@ -26,6 +28,10 @@ NeuralNet.h
 iostream
 -
 vector
+-
+fstream
+-
+sstream
 -
 Neuron.h
 /home/felipe_xavier/Projects/NeuralNetcpp/Neuron.h
@@ -47,10 +53,6 @@ random
 /home/felipe_xavier/Projects/NeuralNetcpp/main.cpp
 NeuralNet.h
 /home/felipe_xavier/Projects/NeuralNetcpp/NeuralNet.h
-Neuron.h
-/home/felipe_xavier/Projects/NeuralNetcpp/Neuron.h
-Matrix.h
-/home/felipe_xavier/Projects/NeuralNetcpp/Matrix.h
 iostream
 -
 

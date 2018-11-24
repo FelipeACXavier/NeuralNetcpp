@@ -1,11 +1,9 @@
 #include "NeuralNet.h"
-#include "Neuron.h"
-#include "Matrix.h"
 #include <iostream>
 
 int main()
 {
-    std::vector<std::vector<double>> inputs = {
+    /*std::vector<std::vector<double>> inputs = {
         {0, 0},
         {0, 1},
         {1, 0},
@@ -27,7 +25,7 @@ int main()
 
     std::srand(std::time(nullptr));
 
-    for(int i = 0; i < 10000; i++)
+    for(int i = 0; i < 100; i++)
     {
         std::cout << "Generation " << i << " >>>>>>> " << std::endl;
         int j = std::rand()/((RAND_MAX + 1u)/4);
@@ -62,9 +60,14 @@ int main()
     a.print();
     Matrix::printVector(d);
     b.print();
-    c.print(); */
+    c.print();
 
+    mynet.saveNet("mynet.txt");*/
 
+    // ---------------------------
+    NeuralNet net = NeuralNet::loadNet("mynet.txt");
+
+    //net.printNet();
     
     return 0;
 }

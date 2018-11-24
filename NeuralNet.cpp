@@ -52,6 +52,19 @@ void NeuralNet::setBias(double x)
 	this->bias = x;
 }
 
+void NeuralNet::loadBias(std::vector<double> myVector)
+{
+	int index = 0;
+	for (int i = 0; i < this->layerSize.size(); i++)
+	{
+		for (int j = 0; j < this->layerSize[i]; j++)
+		{
+			this->neuralnet[i][j].setBias(myVector[index]);
+			index++;
+		}
+	}
+}
+
 // Executes the feedforward propagation
 void NeuralNet::feedForward(const std::vector<double> &inputValues)
 {
@@ -132,7 +145,7 @@ void NeuralNet::createWeights(std::vector<int> &layers)
 		// Columns are equal to the input layer
 		weights.push_back(Matrix(layers[i+1], layers[i]));
 	}
-	std::cout << "weights length: " << weights.size() << std::endl;
+	// std::cout << "weights length: " << weights.size() << std::endl;
 }
 
 // Print current state of network neurons
@@ -187,20 +200,134 @@ void NeuralNet::setActivation(char v)
 
 void NeuralNet::saveNet(std::string filename)
 {
-	ofstream myfile;
-	myfile.open(filename, ios::out);
-	myfile << "Bias: " << this->bias;
-	counter = 0;
+	std::ofstream myfile;
+	myfile.open(filename);
+	
+	// Saves network topology ---------------------
+	myfile << "Topology:\n";
+	for(int i = 0; i < this->layerSize.size(); i++)
+		myfile << this->layerSize[i] << ' ';
+	myfile << '\n';
+	
+	// Saves activation function ------------------
+	myfile << "Activation function:\n" << this->activeFunc << '\n';
+	
+	// Saves bias for input -----------------------
+	myfile << "Input Bias:\n" << this->bias << "\n";
+
+	// Saves weights ------------------------------
+	int counter = 0;
 	for(Matrix &m : this->weights)
 	{
-		myfile << "weights: " << counter << "\n";
+		myfile << "Weights: " << counter << "\n";
 		m.saveMatrix(myfile);
+		myfile << '\n';
 		counter++;
+	}
+
+	// Saves bias ---------------------------------
+	myfile << "Bias:\n";
+	for (int i = 0; i < this->layerSize.size(); i++)
+	{
+		for (int j = 0; j < this->layerSize[i]; j++)
+		{
+			myfile << this->neuralnet[i][j].getValue() << ' ';
+		}
 	}
 	myfile.close();
 }
 
-void NeuralNet::loadNet(std::string filename)
+NeuralNet NeuralNet::loadNet(std::string filename)
 {
+	NeuralNet* net;
+	Matrix* temp;
+	std::vector<int> topology;
+	std::vector<double> weights;
+	std::vector<double> bias;
+	std::string line;
+	int rows, cols, whichLine = 0;
+	int whichWeight = 0;
+	double loadbias;
+
+	std::ifstream myfile;
+	myfile.open(filename);
+
+	if (myfile.is_open())
+	{
+		while (std::getline(myfile,line))
+    	{
+			//std::cout << line << '\n';
+			if(line[0] == 'T')
+				std::cout << "Reading Topology" << std::endl;
+			else if(line[0] == 'A')
+				std::cout << "\nReading Activation Function" << std::endl;
+			else if(line[0] == 'W')
+				std::cout << "\nReading Weights" << std::endl;
+			else if(line[0] == 'I')
+				std::cout << "\nReading Input Bias" << std::endl;
+			else if(line[0] == 'B'){
+				std::cout << "\nReading Bias" << std::endl;
+				whichLine++;
+			} else {
+				std::stringstream ss(line);
+				switch(whichLine)
+				{
+					case 0: // Read the topology of thewsaved neural net
+						int tp;
+						while(ss >> tp)
+							topology.push_back(tp);
+						
+						Matrix::printVector(topology);
+
+						net = new NeuralNet(topology);
+						whichLine++;
+						break;
+					case 1: // Read the activation function of the saved neural net
+						char c;
+						ss >> c;
+						net->setActivation(c);
+						std::cout << "Activation: " << c << '\n';
+						whichLine++;
+						break;
+					case 2: // Read the input bias of the saved neural net
+						ss >> loadbias;
+						std::cout << "Bias: " << loadbias << '\n';
+						whichLine++;
+						break;
+					case 3: // Read the weights of the saved neural net
+						rows = topology[whichWeight + 1];
+						cols = topology[whichWeight];
+						
+						double we;
+						while(ss >> we)
+							weights.push_back(we);
+						Matrix::printVector(weights);
+						temp = new Matrix(weights, rows, cols);
+
+						net->weights[whichWeight] = *temp;
+						net->weights[whichWeight].print();
+
+						weights.clear();
+						whichWeight++;
+						break;
+					case 4: // Read the bias for the whole network
+						double bi;
+						while(ss >> bi)
+							bias.push_back(bi);
+						
+						Matrix::printVector(bias);
+						net->loadBias(bias);
+						net->setBias(loadbias);
+						whichLine++;
+						break;
+					default:
+						std::cout << "Neural Network model loaded" << std::endl;
+				}
+			}
+	    }
+	}
+		
+	myfile.close();
+	return *net;
 
 }

@@ -6,7 +6,7 @@
 Neuron::Neuron()
 {
 	this->bias = randomize(-1, 1);
-	std::cout << "bias: " << this->bias << std::endl;
+	// std::cout << "bias: " << this->bias << std::endl;
 	this->currentValue = 0;//randomize(0, 1);
 	this->error = 0;
 }

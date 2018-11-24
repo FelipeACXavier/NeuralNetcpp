@@ -5,6 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include <sstream>
 #include "Neuron.h"
 #include "Matrix.h"
 
@@ -22,13 +23,14 @@ class NeuralNet
 		void setLearningRate(double x);
 		void updateWeights(Matrix weights, Matrix derivative, int l);
 		void train(std::vector<double> inputs, std::vector<double> targets);
+		void loadBias(std::vector<double> myVector);
 		void setActivation(char v);
 		void setBias(double x);
 		void printNet();
 		void printWeights();
 
 		void saveNet(std::string filename);
-		void loadNet(std::string filename);
+		static NeuralNet loadNet(std::string filename);
 
 		std::vector<double> getOutput();
 

@@ -37,6 +37,22 @@ Matrix::Matrix(int rows, int cols, int zero)
 		}
 	}
 }
+// Initializes from vector with own inputs
+Matrix::Matrix(std::vector<double> myVector, int rows, int cols)
+{
+	this->rows = rows;
+	this->columns = cols;
+	int index = 0;
+	for (int i = 0; i < rows; i++)
+	{
+		matrix.push_back(std::vector<double>());
+		for (int j = 0; j < cols; j++)
+		{
+			matrix.back().push_back(myVector[index]);
+			index++;
+		}
+	}
+}
 
 // --------------------------------------------------------------- //
 // ------------------------ Other Methods ------------------------ //
@@ -113,13 +129,15 @@ Matrix Matrix::toMatrix(std::vector<int> myVector)
 	}
 	return temp;
 }
-
+//--------------------------------------
+// Set how many decimals will be printed 
 void Matrix::setCoutPrecision(int x)
 {
 	std::cout << std::fixed;
 	std::cout << std::setprecision(x);
 }
 
+// Converts matrix to columns vector
 std::vector<double> Matrix::toVector()
 {
 	std::vector<double> temp;
@@ -130,7 +148,16 @@ std::vector<double> Matrix::toVector()
 	return temp;
 }
 
+// Print Vectors 
 void Matrix::printVector(std::vector<double> &myVector)
+{
+	for (int i = 0; i < myVector.size(); i++)
+	{
+		std::cout << "Value " << i << ": " << myVector[i] << std::endl;
+	}
+}
+
+void Matrix::printVector(std::vector<int> &myVector)
 {
 	for (int i = 0; i < myVector.size(); i++)
 	{
@@ -145,16 +172,21 @@ void Matrix::printVector(std::vector<Neuron> &myVector)
 		std::cout << "Value " << i << ": " << myVector[i].getValue() << std::endl;
 	}
 }
-
-void Matrix::saveMatrix(ofstream filename)
+//--------------------------------------
+// Saves matrix in txt format for further use
+void Matrix::saveMatrix(std::ofstream &filename)
 {
+	//std::cout << "Rows: " << this->getRows() << std::endl;
+	//std::cout << "Columns: " << this->getColumns() << std::endl;
 	for(int i = 0; i < this->getRows(); i++)
 	{
-		for(int j = 0; i < this->getColumns(); j++)
+		for(int j = 0; j < this->getColumns(); j++)
 		{
-			filename << this->matrix[i][j];
+			//std::cout << this->matrix[i][j] << ' ';
+			filename << this->matrix[i][j] << ' ';
 		}
-		filename << "\n";
+		//std::cout << std::endl;
+		//filename << "\n";
 	}
 }
 // --------------------------------------------------------------- //

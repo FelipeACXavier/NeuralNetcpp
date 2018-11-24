@@ -1,0 +1,12 @@
+Topology:
+2 2 1 
+Activation function:
+t
+Input Bias:
+0.02
+Weights: 0
+1.76982 -0.694631 -0.739371 1.91708 
+Weights: 1
+0.618869 0.690386 
+Bias:
+1.02 1.02 0.799308 0.83404 0.78964 

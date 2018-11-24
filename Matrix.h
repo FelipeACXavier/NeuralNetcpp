@@ -13,6 +13,7 @@ class Matrix
 		// Constructors
 		Matrix(int rows, int cols);
 		Matrix(int rows, int cols, int zero);
+		Matrix(std::vector<double> myVector, int rows, int cols);
 
 		// General methods
 		int getRows();
@@ -21,8 +22,9 @@ class Matrix
 		std::vector<std::vector<double>> matrix;
 
 		Matrix transpose();
-		void saveMatrix(ofstream filename);
+		void saveMatrix(std::ofstream &filename);
 		void print();
+		static void printVector(std::vector<int> &myVector);
 		static void printVector(std::vector<double> &myVector);
 		static void printVector(std::vector<Neuron> &myVector);
 		static void setCoutPrecision(int x);
